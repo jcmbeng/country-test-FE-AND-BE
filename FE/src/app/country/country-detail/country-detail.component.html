@@ -1,0 +1,28 @@
+<div class="container" *ngIf="cities">
+  <button mat-stroked-button color="primary" routerLink="/countries">
+   Back to countries list
+  </button>
+
+  <mat-card style="margin-top: 20px;">
+    <mat-card-header>
+      <mat-card-title>Cities</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <table mat-table [dataSource]="cities" class="full-width">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> City </th>
+          <td mat-cell *matCellDef="let city"> {{city.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="pop">
+          <th mat-header-cell *matHeaderCellDef> Population </th>
+          <td mat-cell *matCellDef="let city"> {{city.population | number}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="['name', 'pop']"></tr>
+        <tr mat-row *matRowDef="let row; columns: ['name', 'pop'];"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,63 @@
+/* Center everything on the page */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f5f7fa; /* Light professional grey */
+  min-height: 100vh;
+}
+
+/* Constrain the card width */
+.main-card {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+  background: white;
+}
+
+mat-card-header {
+  padding: 24px;
+  background-color: #ffffff;
+}
+
+mat-card-title {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #1a237e; /* Deep Navy */
+}
+
+/* Individual list item styling */
+.country-item {
+  height: 80px !important;
+  transition: all 0.3s ease !important;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.country-item:hover {
+  background-color: #e8eaf6 !important; /* Very light blue */
+  transform: translateX(8px); /* Subtle slide effect */
+}
+
+.globe-icon {
+  color: #3f51b5;
+  margin-right: 12px;
+}
+
+.country-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.country-code {
+  color: #757575;
+  font-size: 0.85rem;
+}
+
+/* The arrow on the right */
+.chevron {
+  color: #bdbdbd;
+  font-size: 20px;
+  margin-left: auto;
+}
